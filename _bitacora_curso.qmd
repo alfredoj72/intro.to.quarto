@@ -1,0 +1,192 @@
+---
+title: "Bitácora (Escribiendo con Quarto)"
+author: "Pedro J. Pérez"
+format: 
+  html:
+    theme: minty  #- https://quarto.org/docs/output-formats/html-themes.html
+    #-https://quarto.org/docs/websites/website-blog.html#themes
+    backgroundcolor: "#F1F3F4"
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    smooth-scroll: true
+    self-contained: true
+    link-external-icon: true
+    link-external-newwindow: true
+    html-math-method: katex
+    citations-hover: false
+    footnotes-hover: false
+#    css: styles.css
+# comments:
+#   hypothesis: 
+#     theme: clean
+---
+
+{{< kbd Shift-Ctrl-P >}}.
+
+ 💬
+ 
+ 
+:::{.notes}
+
+:::
+
+::: {.callout-tip collapse="true" appearance="default" icon="false"}
+
+
+
+# 0. Cosas ultima hora
+
+- prueba algunas de estas opciones para los chunks: <https://quarto.org/docs/reference/cells/cells-knitr.html>
+
+
+
+
+# 0. ESTUDIAR
+
+### Visual Editor
+
+### Imágenes
+
+### Bibliografía
+
+
+
+- Si al final hay tiempo, has de rehacerlo un poquillo metiendo [este post](https://tidytales.ca/series/2023-01-24_reproducible-data-science/posts/zotero-setup.html#using-zotero-for-citations-in-quarto-and-r-markdown-documents) que lleva a esto de [editor visual deRStudio](https://rstudio.github.io/visual-markdown-editing/citations.html) y al [paquete rbbt](https://github.com/paleolimbot/rbbt) y al [archivo de CSL's](https://citationstyles.org/)
+
+- léete esto si hay tt: <https://www.stephaniehicks.com/jhustatcomputing2022/posts/2022-09-01-reference-management/>
+
+
+### Referencias cruzadas
+
+<br>
+
+-----------------------------------------------------------
+
+
+# 1. TUNEADO 
+
+## Revealjs: tunear con SASS 
+
+- Documentación [aquí](https://quarto.org/docs/presentations/revealjs/themes.html#customizing-themes)
+
+```markdown
+---
+title: "Presentation"
+format:
+  revealjs: 
+    theme: [default, custom.scss]
+---
+```
+
+- GUAY: es .scss guay, es Cara Thompson q tunea el footer de las slides, GOOD,  Need to move the footer? Find footer.css! <https://twitter.com/cararthompson/status/1570893059080220672/photo/1>
+
+Slides themes: <https://quarto.org/docs/presentations/revealjs/themes.html>
+
+SASS variables: <https://quarto.org/docs/presentations/revealjs/themes.html#sass-variables>
+
+themes para html: <https://quarto.org/docs/output-formats/html-themes.html> y <https://quarto.org/docs/output-formats/html-themes-more.html>
+
+
+
+### Tuneado de las slides
+
+- justificar el texto en las slides (no se si es buena idea, xq no sé cómo quedarán las frases cortitas)
+
+- poder poner los **H4 centrados y con otro color** (parece q si funciona lo de centrado, PERO no lo del color)
+
+- Estas [nuevas slides](https://lukesmorris.com/Cedars_CRCs/Cedars_CRCs.html#/title-slide) están chulas. El repo [aquí](https://github.com/morrisLuke/Cedars_CRCs/blob/main/Cedars_CRCs.qmd) Lo ví en [este toot](https://fosstodon.org/@lukemorrisverse/110396669037452828)
+
+
+- [Nuevas slides](https://fosstodon.org/@smach/110383760398563503) no muy chulas, pero [esto](https://github.com/Filebb/Intro_Quarto/blob/main/theme.scss)  te dejará cambiar el color de los header's en las slides **AQUI**
+
+- Si usas el theme "sandstone", salen unos TAB's muy chulos
+
+
+
+
+## Tunear blog
+
+- El TOC: <https://quarto.org/docs/output-formats/html-themes.html#table-of-contents>
+
+
+- Este BLOG tiene chachi **lo del TOC**, lo tiene del mismo color q el fondo: <https://samanthacsik.github.io/posts/2022-10-24-quarto-blogs/#i.-before-we-chat-about-blogs>
+
+- El color del TOC, la solución puede estar [aquí](https://css-tricks.com/a-perfect-table-of-contents-with-html-css/). NO, esta realmente aquí: <https://github.com/quarto-dev/quarto-cli/issues/3460>
+
+
+## Tunear (otras cosas)
+
+- me gustaría que las imágenes no se llamasen "gráficos" y que tuviesen un cuadrito enmarcándolas y que el caption estuviese centrado (<https://github.com/quarto-dev/quarto-cli/issues/2306>)
+
+- que cuando hayan 2 imágenes, q sean del mismo tamaño, o al menos que los sub-captions estuviesen alineados
+
+
+
+------------------------------------------------------------------------
+
+# 4. TODO
+
+## 4.4 Cuestionario
+
+
+
+### Ejercicio 3
+
+- Hacer una web.
+
+- Igual estaría bien una web como [esta](https://www.ericrscott.com/), el repo [aquí](https://github.com/Aariq/website-quarto)
+
+
+
+<br>
+
+-----------------------
+
+<br>
+
+
+# 5. RECUERDA
+
+## 5.0 Herramientas
+
+- Editor de html: <https://htmled.it/>
+
+- Editores Markdown online como [este](https://dillinger.io/) o [este](https://vuejs.org/examples/#markdown)
+ 
+-  Editores online de ecuaciones en Latex [aquí](https://www.latex4technics.com/) y [aquí](http://www.sciweavers.org/free-online-latex-equation-editor). Puedes ver algunos ejemplos de ecuaciones escritas en Latex [aquí](https://dereksonderegger.github.io/570L/16-rmarkdown-tricks.html) 
+
+
+
+## 5.1 Shortcuts
+
+- **GOOOOOD**: CONTROL + SPACE en el yaml abre las opciones (GOOD)
+
+- Tidytales: <https://tidytales.ca/series/2023-01-24_reproducible-data-science/posts/productivity-tips.html>
+
+-  @LuisDVerde: Los materiales del tutorial "Herramientas y atajos para programar eficientemente con RStudio":   <https://luisdva.github.io/LatinR2022/>
+
+
+
+## Z. ChaGPT
+
+- ver esta conferencia: <https://www.youtube.com/watch?v=KoswX3uaLYk> en el minuto 18 esta haciendo unas slides
+
+- y mira este video: <https://www.youtube.com/watch?v=viJt_DXTfwA>
+
+- hilo con usos de GPT: <https://twitter.com/javilop/status/1635975678893133825>
+
+- usos de BingAI: <https://oneusefulthing.substack.com/p/power-and-weirdness-how-to-use-bing> por eje comparar precios de productos
+
+- a este le hizo una app para el móvil y luego corrigió sus errores: <https://twitter.com/mortenjust/status/1636001311417319426?t=N4qUrqaOcjJeXvTL8ZiL_w&s=09>
+
+-  a este le hizo un ping-pong <https://twitter.com/skirano/status/1635736107949195278?t=TedZ0VN6kn92TeQl5swa1Q&s=09>
+
+- hilo con usos de GPT: <https://twitter.com/LinusEkenstam/status/1635754587775967233?t=py38mm2pO9FTw-sxiA3nZQ&s=09>
+
+- q es lo q GPT no hace bien: <https://twitter.com/dpereirapaz/status/1636270246876049408> pasa los test pero ...
+
+- las IA mienten: <https://433.world/@Yuvalne/110032775917243633>
+
+- INTENTA hacer que una IA te resuma un vídeo de Youtube, por ejemplo el de Bret Victor: <http://worrydream.com/dbx/>
+

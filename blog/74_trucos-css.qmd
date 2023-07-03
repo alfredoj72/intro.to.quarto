@@ -1,0 +1,32 @@
+---
+title: "Algunos trucos CSS y SASS"
+author: "Pedro J. Pérez"
+date: 2023-02-06
+categories: [CSS , SASS]
+image: "./thumbnails/thumbnail_generico.png"
+#subtitle: | 
+#  Practicando con Quarto
+description: |
+  Post en proceso de elaboración
+---
+
+## Intro (post in progress)
+
+El último día quiero practicar algunos trucos para tunear. Por ejemplo
+
+- [Aquí](https://github.com/vizdata-s23/vizdata-s23/blob/main/style/sta313.scss) un archivo `.scss` de Mine. Pone en el yaml: `linkcolor: “#866fa3”`^[Es el color "Glossy Grape"] y luego lo referencia en el archivo .scss para hacer que los links se hagan más tenues y se subrayen cuando estás sobre ellos^[Para mi gusto se atenúan demasiado, igual en lugar de un 40% hay que poner otro %].
+
+```css
+$hover-color: lighten($link-color, 40%);
+
+a{
+  color: $link-color;
+  text-decoration: none;
+  
+  &:hover{
+    color: $hover-color;
+    border-bottom: 1px solid $hover-color;
+  }
+  
+}
+```

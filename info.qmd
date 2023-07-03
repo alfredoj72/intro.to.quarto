@@ -1,0 +1,140 @@
+---
+#title: "Información sobre el curso"
+toc: true
+#self-contained: true
+---
+
+## Información sobre el curso
+
+::: {.callout-note appearance="minimal" icon="false"}
+## 
+
+-   Forma parte de la oferta del [SFPIE](https://www.uv.es/uvweb/servei-formacio-permanent-innovacio-educativa/ca/sfpie-1286203488816.html){target="_blank"} de la Universitat de València. La ficha oficial del curso está [aquí](https://www.uv.es/uvweb/servei-formacio-permanent-innovacio-educativa/ca/oferta-formativa/-creacio-documents-reprodu-bles-pagines-webs-r-1286213964422/PDIFormacio.html?id=1286294968633){target="_blank"}.
+
+-   El curso es una **introducción a Quarto**, un nuevo sistema para generar publicaciones (libros, transparencias, blogs, webs, etc...) científicas y técnicas. Puedes ver ejemplos en esta [Gallery](https://quarto.org/docs/gallery/){target="_blank"}.
+
+-   En el curso usaremos [R](https://cran.r-project.org/){target="_blank"}, y fundamentalmente [Quarto](https://quarto.org/docs/get-started/){target="_blank"}, a través del IDE [RStudio](https://www.rstudio.com/products/rstudio/download/#download){target="_blank"}.
+
+
+-   Se recomienda tener instaladas **versiones recientes** de los 3 programas. Tienes instrucciones de instalación más abajo
+
+-   Es muy-muy conveniente acudir al curso con tu **propio ordenador**. Además, es conveniente que traigas **un ratón**: piensa que buena parte de los errores que cometeremos se deberán a la precisión en copy-paste. Evitémoslo!!
+
+
+-   Los materiales que usaremos están en [Materiales](materiales.qmd).
+:::
+
+## Horario y aula
+
+::: {.callout-note appearance="minimal" icon="false"}
+## 
+
+| Día                     | Hora          | Lugar                                    |
+|---------------------|------------------|----------------------------------|
+| 26 de junio (lunes)     | 16:00 a 20:00 | Aula 302 (Aulario Sur, Campus Tarongers) |
+| 28 de junio (miércoles) | 16:00 a 20:00 | Aula 302 (Aulario Sur, Campus Tarongers) |
+| 3 de julio (lunes)      | 16:00 a 20:00 | Aula 302 (Aulario Sur, Campus Tarongers) |
+:::
+
+```{r}
+#| echo: false
+#| eval: false
+library(leaflet)
+leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+addMarkers(lng = -0.34371, lat = 39.47795, popup = "Aulario Sur del Campus de Tarongers)")
+```
+
+## Lugar
+
+Las clases se desarrollarán en:
+
+::: {.callout-note collapse="true" appearance="default" icon="false"}
+## **Aula 302** del **aulario Sur del Campus de Tarongers** (Universitat de València)
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079.620706245074!2d-0.34585198436775366!3d39.47789667012178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604885bfd7753f%3A0x9ce3658009b3a33!2sAulari%20Sud%20%2F%20Aulario%20Sur!5e0!3m2!1ses!2ses!4v1678529561371!5m2!1ses!2ses" width="870" height="500" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+
+</iframe>
+:::
+
+-   Si el mapa anterior no se te muestra, también puedes verlo [aquí](https://goo.gl/maps/sKgDr3U2gwVsKHxL6){target="_blank"}
+
+## Programas (instalación)
+
+::: {.callout-important collapse="false" appearance="default" icon="false"}
+## Instalación de R, RStudio y Quarto
+
+-   En el curso usaremos 3 programas: R, RStudio y Quarto, así que tenemos que instalarlos
+
+-   Has de instalar los programas en este orden:
+
+    1.  R: <https://cran.r-project.org/>{target="_blank"}
+
+    2.  RStudio: <https://posit.co/download/rstudio-desktop/>{target="_blank"}
+
+    3.  Quarto: <https://quarto.org/docs/download/>{target="_blank"}
+
+-   Solamente has de descargar las versiones de los instaladores adecuadas para tu sistema operativo
+:::
+
+<br>
+
+
+
+::: {.callout-important collapse="true" appearance="default" icon="false"}
+## Instalación de paquetes
+
+- En el curso también usaremos algunos paquetes de R, así que hay que instalarlos
+
+- Los paquetes se han de instalar una vez hayas instalado los 3 programas (R, RStudio y Quarto)
+
+- Los paquetes no son necesarios para el primer día del curso, así que los instalaremos en clase durante la **segunda sesión** del curso
+  
+:::
+
+
+
+
+::: {.callout-important collapse="true" appearance="default" icon="false"}
+## ¿Cómo instalar los paquetes?
+
+- Recuerda que Los paquetes no son necesarios para el primer día del curso, así que los instalaremos en clase durante la segunda sesión
+
+- Algunos paquetes se han de compilar por lo que hay que tener las herramientas necesarias, así que:
+
+    - Si usas Windows instalaremos **Rtools**. [Aquí](https://cran.r-project.org/bin/windows/Rtools/) puedes descargarte el instalador adecuado
+    
+    - Si tienes un Mac, tendrás que instalar the **Xcode Command Line Tools**. Lo normal es que lo tengas ya instalado, si no fuese el caso, [aquí](https://www.makeuseof.com/install-xcode-command-line-tools/) te explican como hacerlo. Además, como nos cuentan [aquí](https://psyteachr.github.io/msc-data-skills/installingr.html), si tienes un Mac, es conveniente instalar **XQuartz**, para ello sólo tienes que buscar el instalador en <https://www.xquartz.org/>
+
+  
+- Finalmente, para instalar los paquetes que usaremos durante el curso tendremos que **ejecutar las siguientes instrucciones**:
+
+```{r}
+#| eval: false
+#| code-line-numbers: false
+#| code-overflow: wrap
+#| code-fold: true
+#| code-summary: "Código para instalar los paquetes"
+
+#- instalación de paquetes ---------------------------------
+
+install.packages("pak")
+
+pak::pak(c("tidyverse", "ggtext",  "curl", "perezp44/pjpv.curso.R.2022", "irlba", "widyr", "markdown", "gt", "maps", "mapproj"))
+
+pak::pak(c("showtext", "glue",  "plotly", "fs", "countrycode", "here", "quarto"))
+
+#- más cosas ---------------------------------------
+# usethis::edit_rstudio_prefs()
+# usethis::use_blank_slate() 
+
+# quarto install tool tinytext
+# quarto install tinytex --update-path
+# quarto install tool chromium
+```
+
+:::
+
+
+
+
